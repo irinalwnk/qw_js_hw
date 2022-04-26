@@ -3,7 +3,7 @@
 const print = function (a,b){
     let result = a 
     console.log (result)
-    for (let i = 0; i < b; i++ ) {
+    for (let i = 1; i < b; i++ ) {
       result *= a
      console.log (result)
     }
