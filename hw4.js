@@ -448,3 +448,18 @@ info.forEach(({name}) => {
 
 let result = info.filter(({name}) => count[name] === 1);
 console.log(result);
+
+
+// Task 2*** Реализуйте считывание из JSONки из файла task2.json с помощью, например, 
+//модуля fs. для дальнейшего использования в функции, описанной в задании
+import { createRequire } from "module"; 
+const require = createRequire(import.meta.url);
+
+const json = require('./task2.json');
+
+let count1 = {};
+json.forEach(({name}) => {
+    count1[name] = (count1[name] || 0) + 1;
+});
+let result1 = json.filter(({name}) => count1[name] === 1);
+console.log(result1);
