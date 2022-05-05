@@ -445,9 +445,15 @@ let count = {};
 info.forEach(({name}) => {
     count[name] = (count[name] || 0) + 1;
 });
-
 let result = info.filter(({name}) => count[name] === 1);
 console.log(result);
+
+//Вариант 2 
+const names = info.map(el => el.name);
+const unique = (names) => {
+    return Array.from(new Set(names));
+};
+console.log( unique(names) );
 
 
 // Task 2*** Реализуйте считывание из JSONки из файла task2.json с помощью, например, 
